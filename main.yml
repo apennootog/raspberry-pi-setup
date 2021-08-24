@@ -1,5 +1,5 @@
 ---
-  - name: Ansible Test
+  - name: Raspberry Pi Setup
     hosts: all
     become: yes
 
@@ -29,24 +29,6 @@
       - name: Change the hostname
         hostname:
           name: "{{ hostname }}"
-
-      - name: Installing git
-        apt:
-          name: git
-          state: latest
-
-      - name: Installing nano
-        apt:
-          name: nano 
-          state: latest
-
-      - name: Installing python3 and pip3
-        apt:
-          name: python3
-          state: latest
-        apt: 
-          name: python3-pip
-          state: latest
 
       - name: Installing nmap
         apt:
