@@ -1,0 +1,7 @@
+---
+# This will be the default password for the pi user
+pi_user_password: 'password'
+hostname: raspberrypi
+
+# You can choose if you want to instal these programs
+install_nmap: true

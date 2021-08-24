@@ -1,0 +1,58 @@
+---
+  - name: Ansible Test
+    hosts: all
+    become: yes
+
+    pre_tasks:
+      - name: Load configuration file
+        ansible.builtin.include_vars: "{{ item }}"
+        loop: 
+          - config.yml
+
+      - name: Load the hashed password
+        ansible.builtin.include_vars: "{{ item }}"
+        loop: 
+          - ./Files/hashed.yml
+
+    tasks:
+      - name: Update the pi
+        apt:
+          update_cache: yes
+          upgrade: yes
+
+      - name: Changing the password of the pi user to the password in the config file
+        user:
+          name: pi
+          state: present
+          password: "{{ hash }}"
+
+      - name: Change the hostname
+        hostname:
+          name: "{{ hostname }}"
+
+      - name: Installing git
+        apt:
+          name: git
+          state: latest
+
+      - name: Installing nano
+        apt:
+          name: nano 
+          state: latest
+
+      - name: Installing python3 and pip3
+        apt:
+          name: python3
+          state: latest
+        apt: 
+          name: python3-pip
+          state: latest
+
+      - name: Installing nmap
+        apt:
+          name: nmap
+          state: latest
+        when: install_nmap
+        
+
+      
