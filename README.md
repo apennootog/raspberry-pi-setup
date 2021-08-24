@@ -49,7 +49,7 @@ This ansible project is for the not so experienced people who want to play with 
 8. Run the playbook
 
    ```
-   ansible-playbook main.yml -K
+   ansible-playbook main.yml -k -K
    ```
 
    > If it asks for the become password just type your sudo password in, the default is **raspberry** 
