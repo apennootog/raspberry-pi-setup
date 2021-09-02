@@ -1,7 +1,9 @@
 ---
-# This will be the default password for the pi user
+# Disale this feature if you don't want to change the password of the pi user
+change_password: true
 pi_user_password: 'password'
+
 hostname: raspberrypi
 
-# You can choose if you want to instal these programs
-install_nmap: true
+# You can choose if you want to instal these dependencys
+nmap: true

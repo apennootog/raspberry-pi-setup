@@ -4,37 +4,27 @@
     become: yes
 
     pre_tasks:
-      - name: Load configuration file
+      - name: Loading configuration files
         ansible.builtin.include_vars: "{{ item }}"
         loop: 
           - config.yml
-
-      - name: Load the hashed password
         ansible.builtin.include_vars: "{{ item }}"
         loop: 
           - ./Files/hashed.yml
 
     tasks:
-      - name: Update the pi
+      - name: Updating the pi
         apt:
           update_cache: yes
           upgrade: yes
 
-      - name: Changing the password of the pi user to the password in the config file
-        user:
-          name: pi
-          state: present
-          password: "{{ hash }}"
+      - name: Settting the new password
+        import_tasks: Tasks/password.yml
+        when: change_password
 
-      - name: Change the hostname
+      - name: Changing the hostname
         hostname:
           name: "{{ hostname }}"
-
-      - name: Installing nmap
-        apt:
-          name: nmap
-          state: latest
-        when: install_nmap
         
 
       
