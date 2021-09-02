@@ -1,6 +1,6 @@
 ---
-# Disale this feature if you don't want to change the password of the pi user
-change_password: true
+# Enable this feature if you want to change the password of the pi user
+change_password: false
 pi_user_password: 'password'
 
 hostname: raspberrypi
