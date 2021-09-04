@@ -12,7 +12,7 @@
       - name: Loading the hashed password
         include_vars: "{{ item }}"
         loop: 
-          - ../Files/hashed.yml
+          - ./Files/hashed.yml
 
     tasks:
       - name: Updating the pi
