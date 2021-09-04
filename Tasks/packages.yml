@@ -1,0 +1,18 @@
+---
+- name: Installing nmap
+  apt:
+    name: nmap
+    state: latest
+  when: nmap
+
+- name: Installing docker
+  apt:
+    name: docker
+    state: latest
+  when: docker
+
+  - name: Installing nodejs
+  apt:
+    name: nodejs
+    state: latest
+  when: nodejs

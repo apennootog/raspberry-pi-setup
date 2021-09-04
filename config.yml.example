@@ -3,5 +3,7 @@
 change_password: false
 pi_user_password: 'password'
 
-# You can choose if you want to instal these dependencys
+# You can choose if you want to instal these packages
 nmap: true
+docker: true
+nodejs: true

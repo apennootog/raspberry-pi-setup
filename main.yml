@@ -28,6 +28,9 @@
       - name: Settting the new password
         import_tasks: Tasks/password.yml
         when: change_password
+
+      - name: Installing the packages
+        import_tasks: Tasks/packages.yml
         
 
       

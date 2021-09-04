@@ -1,6 +1,0 @@
----
-- name: Installing nmap
-  apt:
-    name: nmap
-    state: latest
-  when: nmap
