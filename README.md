@@ -1,3 +1,7 @@
+<p align="center">
+   <img src="Images/rpi.png" width="100" height="130">
+</p>
+
 # Raspberry Pi 4 Setup
 
 This ansible project will set up your raspberry pi, it will install some packages and change the default password. It is a quick and easy way to do all the setup work.
