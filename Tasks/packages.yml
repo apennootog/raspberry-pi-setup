@@ -11,7 +11,7 @@
     state: latest
   when: docker
 
-  - name: Installing nodejs
+- name: Installing nodejs
   apt:
     name: nodejs
     state: latest
