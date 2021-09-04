@@ -1,62 +1,55 @@
 # Raspberry Pi 4 Setup
 
-This ansible project is for the not so experienced people who want to play with linux and do all kinds of stuff on their raspberry pi but don't want to go trough the hassle of setting the pi up as a linux server.
+This ansible project will set up your raspberry pi, it will install some packages and change the default password. This is a quick and easy way to do all the setup work.
 
 ## Quick Setup
 
 > You will need **SSH** access to your pi, if you don't how to set this up watch [this](https://www.youtube.com/watch?v=63yw7b0NuWc) video.
 
-1. Install git and anible
-
-   ```
-   sudo apt install git -y && sudo apt install ansible -y
-   ```
-
-2. SSH into your pi and clone this repo
+1. Update cashe and install ansible and git
 
    ```bash
-   git clone https://github.com/apennootog/raspberry-pi-setup.git
+   sudo apt update && sudo apt install git ansible -y
    ```
 
-3. CD into it
+2. Clone this repo and cd into it 
 
    ```bash
-   cd raspberry-pi-setup
+   git clone https://github.com/apennootog/raspberry-pi-setup.git && cd raspberry-pi-setup
    ```
 
-4. Make a copy of the `config.yml.example` and rename it to `config.yml`, you can customize this file to your liking
+3. Copy `config.yml.example` to `config.yml` and customize it to your liking
 
-   > You con do this with nano: `nano config.yml.example` 
+   > You can do this with any command line based text editor, for example: nano (`nano config.yml.example`)
 
-5. Install python3 and pip3
-
-   ```
-   sudo apt install python3 -y && sudo apt install python3-pip -y
-   ```
-
-6. Install the requirements
-
-   ```
-   pip3 install -r requirements.txt
-   ```
-
-7. Run `hash.py`
+4. Run the playbook
 
    ```bash
-   python3 hash.py 
-   ```
-
-8. Run the playbook
-
-   ```
    ansible-playbook main.yml -k -K
    ```
 
-   > If it asks for the become password just type your sudo password in, the default is **raspberry** 
+   > The default ssh password is **rasberry** and the sudo password should be the same if you haven't changed it
+
+   
 
 ## Features
 
 - Changes to default password to a one you configure
-- changes the hostname
-- Installs nmap (optional) 
+- Updates the pi
+- Installs nmap (optional)
+- Installs nodejs (optional)
+- Installs docker (optional)
+- Installs python3 and pip3 
 - Updates will come soon
+
+
+
+## License
+
+MIT
+
+
+
+## Author
+
+This project was created in 2021 by [apennootog](https://github.com/apennootog)  
