@@ -5,10 +5,10 @@
 
     pre_tasks:
       - name: Loading configuration files
-        ansible.builtin.include_vars: "{{ item }}"
+        include_vars: "{{ item }}"
         loop: 
           - config.yml
-        ansible.builtin.include_vars: "<{ item }>"
+        include_vars: "<{ item }>"
         loop: 
           - ./Files/hashed.yml
 
