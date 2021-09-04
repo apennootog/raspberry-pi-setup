@@ -8,6 +8,8 @@
         include_vars: "{{ item }}"
         loop: 
           - config.yml
+        
+      - name: Loading the hashed password
         include_vars: "<{ item }>"
         loop: 
           - ./Files/hashed.yml
