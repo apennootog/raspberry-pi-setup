@@ -1,6 +1,6 @@
 # Raspberry Pi 4 Setup
 
-This ansible project will set up your raspberry pi, it will install some packages and change the default password. This is a quick and easy way to do all the setup work.
+This ansible project will set up your raspberry pi, it will install some packages and change the default password. It is a quick and easy way to do all the setup work.
 
 ## Quick Setup
 
