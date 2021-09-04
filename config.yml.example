@@ -3,7 +3,5 @@
 change_password: false
 pi_user_password: 'password'
 
-hostname: raspberrypi
-
 # You can choose if you want to instal these dependencys
 nmap: true

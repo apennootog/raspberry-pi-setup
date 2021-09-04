@@ -21,10 +21,6 @@
       - name: Settting the new password
         import_tasks: Tasks/password.yml
         when: change_password
-
-      - name: Changing the hostname
-        hostname:
-          name: "{{ hostname }}"
         
 
       
