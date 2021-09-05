@@ -10,23 +10,31 @@ This ansible project will set up your raspberry pi, it will install some package
 
 > You will need **SSH** access to your pi, if you don't how to set this up watch [this](https://www.youtube.com/watch?v=63yw7b0NuWc) video.
 
-1. Update cashe and install ansible and git
+1. Update cache and install pip3 and git
 
    ```bash
-   sudo apt update && sudo apt install git ansible -y
+   sudo apt update && sudo apt install git python3-pip -y
    ```
 
-2. Clone this repo and cd into it 
+2. Install ansible
+
+   ```bash
+   pip3 install ansible
+   ```
+
+   > It is **important** to install ansible with **pip** because with apt you don't get the latest version
+
+3. Clone this repo and cd into it 
 
    ```bash
    git clone https://github.com/apennootog/raspberry-pi-setup.git && cd raspberry-pi-setup
    ```
 
-3. Copy `config.yml.example` to `config.yml` and customize it to your liking
+4. Copy `config.yml.example` to `config.yml` and customize it to your liking
 
    > You can do this with any command line based text editor, for example: nano (`nano config.yml.example`)
 
-4. Run the playbook
+5. Run the playbook
 
    ```bash
    ansible-playbook main.yml -k -K
