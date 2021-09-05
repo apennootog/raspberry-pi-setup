@@ -31,6 +31,10 @@
 
       - name: Installing the packages
         import_tasks: Tasks/packages.yml
+
+      - name: Installing the docker image ({{ docker_image }}
+        import_tasks: Tasks/docker.yml
+        when: install_docker_container
         
 
       

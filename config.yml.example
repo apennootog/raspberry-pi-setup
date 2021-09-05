@@ -7,3 +7,7 @@ pi_user_password: 'password'
 nmap: true
 docker: true
 nodejs: true
+
+# If you enable this feature it will pull the docker container you chose ans install it on the raspberry pi
+install_docker_container: false
+docker_image: image/image
