@@ -27,13 +27,17 @@
   - name: Adding userpermissions
     shell: "usermod -aG docker pi"
 
+  - name: Installing pip (python2)
+    apt:
+      name: python-pip
+      state: latest
+
   - name: Installing docker python sdk
     become_user: pi
     pip:
       name:
         - docker
         - docker-compose
-      executable: pip3
 
   - name: Deploy {{ docker_image }}
     community.docker.docker_container:

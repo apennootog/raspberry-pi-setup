@@ -45,10 +45,8 @@ This ansible project will set up your raspberry pi, it will install some package
 6. Run the playbook
 
    ```bash
-   ansible-playbook main.yml -k -K
+   ansible-playbook main.yml
    ```
-
-   > The default ssh password is **raspberry** and the sudo password should be the same if you haven't changed it
 
    
 
