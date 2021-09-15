@@ -9,5 +9,6 @@ docker: true
 nodejs: true
 
 # If you enable this feature it will pull the docker container you chose ans install it on the raspberry pi
-install_docker_container: false
-docker_image: image/image
+install_docker_container: true
+container_name: Image
+docker_image: someuser/image

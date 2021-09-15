@@ -36,6 +36,8 @@ This ansible project will set up your raspberry pi, it will install some package
    ansible-galaxy collection install -r requirements.yml
    ```
 
+   > If ansible-galaxy is not recognized as a command reboot your pi by doing `sudo reboot`
+
 5. Copy `config.yml.example` to `config.yml` and customize it to your liking
 
    > You can do this with any command line based text editor, for example: nano (`nano config.yml.example`)
