@@ -19,7 +19,7 @@ This ansible project will set up your raspberry pi, it will install some package
 2. Install ansible
 
    ```bash
-   pip3 install ansible -y
+   pip3 install ansible
    ```
 
    > **You need to install ansible with pip** because with apt you don't get the latest version
