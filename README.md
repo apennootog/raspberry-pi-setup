@@ -10,10 +10,10 @@ This ansible project will set up your raspberry pi, it will install some package
 
 > You will need **SSH** access to your pi, if you don't how to set this up watch [this](https://www.youtube.com/watch?v=63yw7b0NuWc) video.
 
-1. Update cache and install pip3 and git
+1. Update cache and install pip3, git and sshpass
 
    ```bash
-   sudo apt update && sudo apt install git python3-pip -y
+   sudo apt update && sudo apt install git python3-pip -y && sudo apt install sshpass -y
    ```
 
 2. Install ansible
